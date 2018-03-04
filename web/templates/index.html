@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>CodAI - Programming language Detection AI</title>
+  <meta name="description" content="Code language Detection AI">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/static/css/sticky-footer.css" rel="stylesheet">
+  <link href="/static/css/nprogress.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link href='https://fonts.googleapis.com/css?family=Play' rel='stylesheet' type='text/css'>
+</head>
+<style>
+  body {
+    font-family: 'Play', sans-serif;
+  }
+</style>
+
+<body onload="LoadModel()">
+ <main role="main" class="container">
+    <h1 class="mt-5 text-primary">CodAI</h1>
+	<H5>
+  <p class="text-secondary">Programming language Detection AI</p>
+</H5>
+    <p>
+      <p id="messageType"></p>
+	  <p id="otherLanguages"></p>
+    </p>
+    <form>
+      <div class="form-group">
+        <label for="messageText">Enter/paste code snippet :</label>
+        <textarea class="form-control" id="messageText" rows="3" oninput="checkInput()" disabled></textarea>
+		<button type="button" id="detectBtn" class="btn btn-primary" style="margin:10px;" onClick="predictCodeLanguage()">Check</button>
+      
+	   <div id="piechart_3d" style="width: 600px; height: 400px;"></div>
+	  </div>
+    </form>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <span class="text-muted">
+        <p>&copy; 2018
+          <a href="https://github.com/rupeshs"> Rupesh Sreeraman</a>
+        </p>
+      </span>
+    </div>
+  </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="/static/js/main.js"></script>
+  <script src="/static/js/nprogress.js"></script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+</body>
+
+</html>
